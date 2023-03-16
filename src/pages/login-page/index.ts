@@ -1,3 +1,3 @@
-import { LoginPage } from './ui/login-page'
+import { lazy } from 'react';
 
-export default LoginPage
+export const LoginPage = lazy(() => import("./ui/login-page")) 

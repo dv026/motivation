@@ -1,3 +1,3 @@
-import { HomePage } from './ui/home-page';
+import { lazy } from 'react';
 
-export default HomePage
+export const HomePage = lazy(() => import("./ui/home-page")) 

@@ -6,7 +6,7 @@ export default defineConfig({
   resolve: {
     // it shows to vite how to build
     alias: {
-      '@' : './src'
+      '@' : '/src'
     }
   }
 })

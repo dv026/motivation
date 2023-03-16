@@ -1,3 +1,3 @@
-import { SettingsPage } from './ui/settings-page'
+import { lazy } from 'react';
 
-export default SettingsPage
+export const SettingsPage = lazy(() => import("./ui/settings-page")) 

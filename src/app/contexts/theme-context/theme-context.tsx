@@ -22,12 +22,20 @@ const ThemeContext = createContext<ThemeContextProps>({
 })
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [theme, setTheme] = useState<ETheme>(ETheme.Light)
+  const [theme, setTheme] = useState<ETheme>(
+    (localStorage.getItem("theme") as ETheme) || ETheme.Light
+  )
+
+  const changeTheme = (theme: ETheme) => {
+    localStorage.setItem("theme", theme)
+    setTheme(theme)
+  }
+
   return (
     <ThemeContext.Provider
       value={{
         theme,
-        setTheme,
+        setTheme: changeTheme,
       }}
     >
       {children}

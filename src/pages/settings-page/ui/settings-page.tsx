@@ -1,17 +1,21 @@
-import {
-  ETheme,
-  useTheme,
-} from "../../../app/contexts/theme-context/theme-context"
+import { ETheme, useTheme } from "@/app/contexts/theme-context/theme-context"
 
-export const SettingsPage = () => {
+const SettingsPage = () => {
   const { theme, setTheme } = useTheme()
+
+  const changeTheme = (p: any) => {
+    setTheme(p)
+  }
+
   return (
     <div>
       <h1>Settings Page</h1>
       <div>
         {theme}
-        <button onClick={() => setTheme(ETheme.Light)}>set light theme</button>
-        <button onClick={() => setTheme(ETheme.Dark)}>set dark theme</button>
+        <button onClick={() => changeTheme(ETheme.Light)}>
+          set light theme
+        </button>
+        <button onClick={() => changeTheme(ETheme.Dark)}>set dark theme</button>
       </div>
     </div>
   )
