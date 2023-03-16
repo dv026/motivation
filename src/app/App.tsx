@@ -1,17 +1,20 @@
 import { lazy, Suspense } from "react"
 import { Routes, Route, Link } from "react-router-dom"
+import { clsx } from "clsx"
 
-import { useTheme } from "./contexts/theme-context"
+import { useTheme } from "./contexts/theme-context/theme-context"
 import "./styles/index.scss"
 
-const HomePage = lazy(() => import("./pages/home/home"))
-const LoginPage = lazy(() => import("./pages/login/login"))
-const SettingsPage = lazy(() => import("./pages/settings/settings"))
+const HomePage = lazy(() => import("../pages/home-page/ui/home-page"))
+const LoginPage = lazy(() => import("../pages/login-page/ui/login-page"))
+const SettingsPage = lazy(
+  () => import("../pages/settings-page/ui/settings-page")
+)
 
 function App() {
   const { theme } = useTheme()
   return (
-    <div className={`app ${theme}`}>
+    <div className={clsx(["app", theme])}>
       hello
       <Link to="/">Home page</Link>
       <Link to="/login">Login page</Link>

@@ -11,7 +11,7 @@ export enum ETheme {
   Dark = "dark",
 }
 
-export interface ThemeContextProps {
+interface ThemeContextProps {
   theme: ETheme
   setTheme: (theme: ETheme) => void
 }

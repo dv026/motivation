@@ -1,4 +1,7 @@
-import { ETheme, useTheme } from "../../contexts/theme-context"
+import {
+  ETheme,
+  useTheme,
+} from "../../../app/contexts/theme-context/theme-context"
 
 export const SettingsPage = () => {
   const { theme, setTheme } = useTheme()
