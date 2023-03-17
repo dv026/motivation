@@ -1,3 +1,5 @@
+import { Navbar } from "@/widgets/navbar"
+import { Sidebar } from "@/widgets/sidebar"
 import { clsx } from "clsx"
 
 import { AppRouter } from "./app-router/ui/app-router"
@@ -8,7 +10,11 @@ function App() {
   const { theme } = useTheme()
   return (
     <div className={clsx(["app", theme])}>
-      <AppRouter />
+      <Navbar />
+      <div className="content-page">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   )
 }

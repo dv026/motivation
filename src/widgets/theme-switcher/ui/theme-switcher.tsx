@@ -6,9 +6,14 @@ import { ReactComponent as ToggleOn } from "@/shared/assets/icons/toggle-on.svg"
 import { ReactComponent as ToggleOff } from "@/shared/assets/icons/toggle-off.svg"
 import { Button } from "@/shared/ui/button/button"
 
-import cls from "./theme-swithcer.module.scss"
+import cls from "./theme-switcher.module.scss"
+import { FC } from "react"
 
-export const ThemeSwitcher = () => {
+interface ThemeSwitcherProps {
+  className?: string
+}
+
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
   const { theme, setTheme } = useTheme()
 
   const changeTheme = () => {
@@ -20,7 +25,10 @@ export const ThemeSwitcher = () => {
   }
 
   return (
-    <Button className={clsx(cls.themeSwitcher)} onClick={changeTheme}>
+    <Button
+      className={clsx(cls.themeSwitcher, className)}
+      onClick={changeTheme}
+    >
       {theme === ETheme.Light ? <ToggleOn /> : <ToggleOff />}
     </Button>
   )

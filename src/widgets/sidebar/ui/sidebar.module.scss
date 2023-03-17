@@ -1,0 +1,19 @@
+.sidebar {
+  width: 300px;
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: var(--primary-color);
+
+  transition: width .3s;
+}
+
+.collapsed {
+  width: 80px;
+}
+
+.themeSwitcher {
+  margin-top: auto;
+}

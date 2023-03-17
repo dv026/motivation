@@ -2,10 +2,20 @@
 @import './themes/dark';
 @import './themes/light';
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
 .app {
   min-height: 100vh;
   font: var(--font-l);
 
   background: var(--bg-color);
   color: var(--primary-color) !important;
+}
+
+.content-page {
+  display: flex;
 }
