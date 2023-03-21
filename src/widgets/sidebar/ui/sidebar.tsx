@@ -1,4 +1,5 @@
 import { Button } from "@/shared/ui/button/button"
+import { LangSwitcher } from "@/widgets/lang-switcher"
 import { ThemeSwitcher } from "@/widgets/theme-switcher"
 import clsx from "clsx"
 import { useState } from "react"
@@ -11,6 +12,7 @@ export const Sidebar = () => {
       <Button onClick={() => setCollapsed((p) => !p)}>toggle collapse</Button>
       <div>sidebar</div>
       <ThemeSwitcher className={cls.themeSwitcher} />
+      <LangSwitcher />
     </div>
   )
 }
