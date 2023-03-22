@@ -1,4 +1,8 @@
 .app.dark {
   --primary-color: #333;
   --bg-color: #e1dcdc;
+
+  --inverted-bg-color: #e58787;
+  --inverted-bg-color-svg: invert(71%) sepia(63%) saturate(591%) hue-rotate(305deg) brightness(92%) contrast(94%);
+  
 }

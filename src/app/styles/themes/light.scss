@@ -1,4 +1,8 @@
 .app.light {
   --primary-color: #1abb3a;
   --bg-color: #e58787;
+
+  --inverted-bg-color: #e1dcdc;
+
+  --inverted-bg-color-svg: invert(98%) sepia(0%) saturate(40%) hue-rotate(135deg) brightness(98%) contrast(89%);
 }

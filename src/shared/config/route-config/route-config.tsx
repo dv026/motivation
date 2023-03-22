@@ -1,3 +1,4 @@
+import { NotFoundPage } from "@/pages/not-found-page/ui/not-found-page"
 import { RouteProps } from "react-router-dom"
 
 import { HomePage } from "../../../pages/home-page"
@@ -8,6 +9,7 @@ export enum EAppRoutes {
   Home = "/",
   Login = "/login",
   Settings = "/settings",
+  NotFound = "*",
 }
 
 export const routeConfig: RouteProps[] = [
@@ -22,5 +24,9 @@ export const routeConfig: RouteProps[] = [
   {
     path: EAppRoutes.Settings,
     element: <SettingsPage />,
+  },
+  {
+    path: EAppRoutes.NotFound,
+    element: <NotFoundPage />,
   },
 ]
