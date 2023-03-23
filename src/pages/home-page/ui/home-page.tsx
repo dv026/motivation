@@ -1,12 +1,32 @@
-import { Navbar } from "@/widgets/navbar"
-import { ThemeSwitcher } from "@/widgets/theme-switcher"
-import classes from "./home.module.scss"
 import { useTranslation } from "react-i18next"
-import { PageLoader } from "@/widgets/page-loader/ui/page-loader"
+import { useEffect, useState } from "react"
+
+import classes from "./home.module.scss"
 
 const HomePage = () => {
   const { t } = useTranslation()
-  return <div className={classes.homePage}>{t("home page")}</div>
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    if (error) {
+      throw new Error()
+    }
+  }, [error])
+
+  return (
+    <div className={classes.homePage}>
+      {t("home page")}
+      <button
+        onClick={() => {
+          const arr: any = [1, 2, 3]
+
+          console.log(arr.name.name)
+        }}
+      >
+        click to error
+      </button>
+    </div>
+  )
 }
 
 export default HomePage
