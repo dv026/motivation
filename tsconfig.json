@@ -19,7 +19,7 @@
     // it shows to TS how to solve
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

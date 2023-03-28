@@ -8,7 +8,7 @@ import {
 import cls from "./link.module.scss"
 
 export enum ELinkVariant {
-  Normal = "normal",
+  Basic = "basic",
   Special = "special",
 }
 
@@ -20,7 +20,7 @@ interface LinkProps extends RouterLinkProps {
 export const Link: FC<LinkProps> = ({
   children,
   className,
-  variant = ELinkVariant.Normal,
+  variant = ELinkVariant.Basic,
   to,
   ...other
 }) => {

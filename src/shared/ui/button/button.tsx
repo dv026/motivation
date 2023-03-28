@@ -10,6 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export enum EButtonVariant {
   Clear = "clear",
+  Basic = "basic",
 }
 
 export const Button: FC<ButtonProps> = ({
