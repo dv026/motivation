@@ -1,4 +1,4 @@
-import { ETheme, useTheme } from "@/app/contexts/theme-context/theme-context"
+import { ETheme, useTheme } from "@/app/contexts/theme-context"
 
 const SettingsPage = () => {
   const { theme, setTheme } = useTheme()

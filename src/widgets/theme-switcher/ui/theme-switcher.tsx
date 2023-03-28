@@ -1,5 +1,5 @@
 import { useTheme } from "@/app/contexts/theme-context"
-import { ETheme } from "@/app/contexts/theme-context/theme-context"
+import { ETheme } from "@/app/contexts/theme-context"
 import clsx from "clsx"
 
 import { ReactComponent as ToggleOn } from "@/shared/assets/icons/toggle-on.svg"
